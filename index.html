@@ -13,13 +13,23 @@
     <main class="conteudo">
         <div class="principal">
             <div class="mochila"></div>
-            <form action="" class="adicionar" id="novoItem">
-                <label for="item">Nome</label>
-                <input type="text" name="nome" id="nome">
-                <label for="item">Quantidade</label>
-                <input type="number" name="quantidade" id="quantidade">
-                <input type="submit" value="adicionar" class="cadastrar">
-            </form>
+            <button id="abre-mochila">Abrir</button>
+            <div id="fade" class="hide"></div>
+            <div id="modal" class="hide">
+                <div class="modal-header">
+                    <h2>Adicione um item</h2>
+                    <button id="fecha-mochila">Fechar</button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="adicionar" id="novoItem">
+                        <label for="item">Nome</label>
+                        <input type="text" name="nome" id="nome">
+                        <label for="item">Quantidade</label>
+                        <input type="number" name="quantidade" id="quantidade">
+                        <input id="fechar" type="submit" value="adicionar" class="cadastrar">
+                    </form>
+                </div>
+            </div>
         </div>
         <ul class="lista" id="lista">
 

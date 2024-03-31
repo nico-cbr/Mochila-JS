@@ -4,6 +4,24 @@ const lista = document.getElementById('lista');
 //!setando os valores do storage no array itens caso contrario cria um array vazio
 const itens = JSON.parse(localStorage.getItem("itens")) || [];
 
+//!criando modal
+const openModalButton = document.querySelector('#abre-mochila');
+const closeModalButton = document.querySelector('#fecha-mochila');
+const modal = document.querySelector('#modal');
+const fade = document.querySelector('#fade');
+const fecha = document.getElementById('fechar');
+
+const toogleModal = ()=>{
+    modal.classList.toggle('hide');
+    fade.classList.toggle('hide');
+}
+
+[openModalButton, closeModalButton, fade, fecha].forEach((el)=>{
+    el.addEventListener('click', ()=> toogleModal());
+})
+
+//!fim modal
+
 //*exibindo o array
 console.log(itens)
 
