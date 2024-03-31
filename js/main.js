@@ -20,6 +20,10 @@ const toogleModal = ()=>{
     el.addEventListener('click', ()=> toogleModal());
 })
 
+form.addEventListener('submit', ()=>{
+    alert("Seu item foi criado")
+})
+
 //!fim modal
 
 //*exibindo o array
@@ -64,7 +68,6 @@ form.addEventListener('submit', (event)=>{
         criaElemento(itemAtual);    
         itens.push(itemAtual);
     }
-
 
     localStorage.setItem("itens", JSON.stringify(itens));
 
